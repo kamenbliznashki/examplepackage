@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Build
+Status](https://travis-ci.com/kamenbliznashki/examplepackage.svg?branch=master)](https://travis-ci.com/kamenbliznashki/examplepackage)
 <!-- badges: end -->
 
 This is an example R package built for Coursera’s Mastering Software
