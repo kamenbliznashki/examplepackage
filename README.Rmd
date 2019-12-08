@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# examplepackage
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is an example R package built for Coursera's Mastering Software Development in R course 2: Building an R Package.
+
+This Package loads, summarizes, and plots US National Highway Traffic Safety Administration's Fatality Analysis Reporting System ([source](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars)), with yearly data on fatal injuries suffered in motor vehicle traffic crashes.
+
+## Installation
+
+You can install from github:
+
+``` r
+#> devtools::install_github([path to this repository])
+```
+
+## Usage
+
+To load package once installed:
+
+```{r example}
+library(examplepackage)
+```
+
+The package provides utility functions to:
+* access the data in a data frame
+* summarize accidents by year
+* plot the data by state against a map of the US using the `maps` package. 
+Note that if `datadir` argument is not provided, built-in data is loaded automatically.
+
+To access raw data in a data frame:
+
+```{r df}
+df = fars_read(filename = 'accident_2013.csv.bz2',   # filename of the built-in dataset for 2013
+               datadir = NULL)                       # this loads from the built-in datasets
+head(df)
+```
+
+To summarize the data:
+
+```{r summary}
+fars_summarize_years(c(2013, 2014))
+```
+
+To plot the location of fatalities for state indexed 1 for year 2013:
+
+```{r plot}
+fars_map_state(1, 2013)
+```

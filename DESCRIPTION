@@ -1,0 +1,22 @@
+Package: examplepackage
+Type: Package
+Title: Example of simple R package to load, summarize and plot USNHTSA fatalities data
+Version: 0.1.0
+Date: 2019-12-06
+Author: Kamen Bliznashki <kamen.bliznashki@gmail.com>
+Maintainer: Kamen Bliznashki <kamen.bliznashki@gmail.com>
+Imports: dplyr, readr, tidyr, maps
+Description: Example package for Coursera's Mastering Software Development in R 
+  course 2: Building an R Package. Package loads, summarizes and plots US National
+  Highway Traffic Safety Administration's Fatality Analysis Reporting System, with 
+  yearly data on fatal injuries suffered in motor vehicle traffic crashes.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/kamenbliznashki/examplepackage
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
